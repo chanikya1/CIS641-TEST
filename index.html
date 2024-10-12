@@ -9,31 +9,28 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #1e3c72, #2a5298), 
-                        url(background-image.jpg);
+            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); /* Subtle pattern background */
+            background-color: #e0e0e0;
             background-size: cover;
-            background-attachment: fixed; /* Keeps the background in place when scrolling */
-            color: #ffffff;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(46, 59, 78, 0.7);
+            background-color: #2e3b4e;
             color: #ffffff;
         }
         section {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #000000;
+            background-color: white; /* Keep text area background clean white */
             margin: 20px auto;
             border-radius: 8px;
             max-width: 1000px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding some shadow for depth */
         }
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(46, 59, 78, 0.7);
+            background-color: #2e3b4e;
             color: #ffffff;
         }
         ul {
@@ -73,23 +70,23 @@
         <h1>Chanikya Boggarapu</h1>
     </header>
 
-    <section>
-        <h2>About Me <button class="heading-button">Read More</button></h2>
+    <section id="about-me">
+        <h2>About Me <button class="heading-button" onclick="scrollToSection('about-me')">Read More</button></h2>
         <p>Dynamic and results-oriented GCP Cloud and DevOps Engineer with 3 Years of experience in designing, implementing, and maintaining AWS, GCP cloud solutions for various clients and automated CI/CD Pipelines. Proficient in managing GCP services such as Compute Engine, storage, cloud SQL, IAM, VPC, and Load balancing. Demonstrated ability to optimize cloud infrastructure for performance, security, and cost-efficiency.</p>
     </section>
 
-    <section>
-        <h2>Interests <button class="heading-button">Explore</button></h2>
+    <section id="interests">
+        <h2>Interests <button class="heading-button" onclick="scrollToSection('interests')">Explore</button></h2>
         <p>I like learning new things on the Internet, cooking in my free time, and I'm passionate about cricket, following the game 24/7/365. I enjoy spending time with my favorite people.</p>
     </section>
 
-    <section>
-        <h2>Technical Background <button class="heading-button">View Details</button></h2>
+    <section id="technical-background">
+        <h2>Technical Background <button class="heading-button" onclick="scrollToSection('technical-background')">View Details</button></h2>
         <p>I completed my undergraduate degree in Computer Science in 2020 and worked as an Associate Cloud Engineer for a pharmaceutical company for three years. In August 2023, I began pursuing my master's in Computer Science at Michigan GVSU. I'm currently in my third semester, with experience in Python, SQL, Linux, Apache, Static, Middleware tools, and Cloud Computing.</p>
     </section>
 
-    <section>
-        <h2>Projects <button class="heading-button">See Projects</button></h2>
+    <section id="projects">
+        <h2>Projects <button class="heading-button" onclick="scrollToSection('projects')">See Projects</button></h2>
         <ul>
             <li><b>Plane Crash Data Analysis:</b> Performed analysis to promote safety in the aviation industry using Python, Numpy, Pandas. (June 2024)</li>
             <li><b>Triggering Notifications for Google Cloud Events:</b> Automated cloud functions for backup processes using GCP services like Pub/Sub and Cloud Functions. (April 2024)</li>
@@ -99,20 +96,26 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Term Project <button class="heading-button">Learn More</button></h2>
-        <p>For my term project this semester, I am developing a comprehensive vehicle inventory system focused on 4-wheeler vehicles produced between 2000 and 2024. The system will serve as an informative platform for potential car buyers, allowing them to compare various models and brands from both India and the USA. The goal is to help international students, like myself, who may be unfamiliar with car brands and models in the USA, make informed decisions when purchasing a vehicle.</p>
-        <p>The project involves creating a user-friendly web application that allows users to search for specific car models, view detailed specifications, and compare vehicles based on performance, features, and pricing. In addition to facilitating car comparisons, the system also opens potential partnerships with dealerships and manufacturers for greater outreach.</p>
-        <p>Throughout the semester, I have been focusing on key aspects such as data management, user interface design, and search functionalities, while also ensuring the platform meets non-functional requirements like security, scalability, and high availability. This project not only showcases my technical skills but also addresses a real-world problem, adding significant value to my academic and professional journey.</p>
+    <section id="term-project">
+        <h2>Term Project <button class="heading-button" onclick="scrollToSection('term-project')">Learn More</button></h2>
+        <p>Currently working on a comprehensive vehicle inventory system that tracks and manages data for 4-wheeler vehicles produced between 2000 and 2024. The system provides detailed records, search functionalities, and analytical tools, allowing users to compare vehicle models across brands from both India and the USA, helping potential buyers make informed decisions.</p>
     </section>
 
-    <section>
-        <h2>Team Project Repositories <button class="heading-button">Visit GitHub</button></h2>
+    <section id="team-repositories">
+        <h2>Team Project Repositories <button class="heading-button" onclick="scrollToSection('team-repositories')">Visit GitHub</button></h2>
         <p><a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles" target="_blank">GitHub Repository: GVSU CIS641 NinjaTurtles</a></p>
     </section>
 
     <footer>
         <p>© 2024 Chanikya Boggarapu. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Function to scroll to a specific section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
