@@ -3,7 +3,10 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Subtle gradient */
+    background: linear-gradient(to bottom, #1e3c72, #2a5298), 
+                url('https://www.transparenttextures.com/patterns/hexellence.png'); /* Background image with subtle texture */
+    background-size: cover; /* Ensures the image covers the full background */
+    background-attachment: fixed; /* Keeps the background in place when scrolling */
     color: #ffffff;
 }
 
