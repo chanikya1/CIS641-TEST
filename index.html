@@ -9,21 +9,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('background-image.jpg');
+            background-image: url('background-image.jpg'); /* Custom nature background image */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            color: #333; 
+            background-attachment: fixed; /* Fixed background while scrolling */
+            color: #333; /* Keep text color readable */
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(46, 59, 78, 0.8); 
+            background-color: rgba(46, 59, 78, 0.8); /* Transparent background for readability */
             color: #ffffff;
         }
         section {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); 
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
             margin: 20px auto;
             border-radius: 8px;
             max-width: 1000px;
@@ -65,6 +65,9 @@
         .heading-button:hover {
             background-color: #1f2b3a;
         }
+        .more-content {
+            display: none; /* Initially hidden */
+        }
     </style>
 </head>
 <body>
@@ -73,39 +76,42 @@
     </header>
 
     <section id="about-me">
-        <h2>About Me <button class="heading-button" onclick="scrollToSection('about-me')">Read More</button></h2>
-        <p>Dynamic and results-oriented GCP Cloud and DevOps Engineer with 3 Years of experience in designing, implementing, and maintaining AWS, GCP cloud solutions for various clients and automated CI/CD Pipelines. Proficient in managing GCP services such as Compute Engine, storage, cloud SQL, IAM, VPC, and Load balancing. Demonstrated ability to optimize cloud infrastructure for performance, security, and cost-efficiency.</p>
+        <h2>About Me <button class="heading-button" onclick="toggleContent('more-about-me')">Read More</button></h2>
+        <p>Dynamic and results-oriented GCP Cloud and DevOps Engineer with 3 years of experience in designing, implementing, and maintaining AWS and GCP cloud solutions for various clients.</p>
+        <div id="more-about-me" class="more-content">
+            <p>Proficient in managing GCP services such as Compute Engine, storage, Cloud SQL, IAM, VPC, and Load balancing. Demonstrated ability to optimize cloud infrastructure for performance, security, and cost-efficiency. I have a strong technical background with a keen interest in learning new technologies and improving operational processes.</p>
+        </div>
     </section>
 
     <section id="interests">
-        <h2>Interests <button class="heading-button" onclick="scrollToSection('interests')">Explore</button></h2>
-        <p>I like learning new things on the Internet, cooking in my free time, and I'm passionate about cricket, following the game 24/7/365. I enjoy spending time with my favorite people.</p>
+        <h2>Interests <button class="heading-button" onclick="toggleContent('more-interests')">Read More</button></h2>
+        <p>I enjoy learning new things on the Internet, cooking in my free time, and following cricket passionately, especially keeping up with Virat Kohli's records.</p>
+        <div id="more-interests" class="more-content">
+            <p>Besides cricket, I am an avid fan of exploring new technologies, particularly in cloud computing and automation. I also enjoy staying updated with the latest trends in DevOps and cloud architecture, attending webinars and tech meetups whenever I can.</p>
+        </div>
     </section>
 
     <section id="technical-background">
-        <h2>Technical Background <button class="heading-button" onclick="scrollToSection('technical-background')">View Details</button></h2>
-        <p>I completed my undergraduate degree in Computer Science in 2020 and worked as an Associate Cloud Engineer for a pharmaceutical company for three years. In August 2023, I began pursuing my master's in Computer Science at Michigan GVSU. I'm currently in my third semester, with experience in Python, SQL, Linux, Apache, Static, Middleware tools, and Cloud Computing.</p>
+        <h2>Technical Background <button class="heading-button" onclick="toggleContent('more-tech-background')">Read More</button></h2>
+        <p>I completed my undergraduate degree in Computer Science in 2020 and worked as an Associate Cloud Engineer for a pharmaceutical company for three years. </p>
+        <div id="more-tech-background" class="more-content">
+            <p>During this time, I specialized in managing cloud solutions, automating processes, and optimizing infrastructure for performance and cost. I gained hands-on experience in Python, SQL, Linux, Apache, Middleware tools, and Cloud Computing. My current master's in Computer Science at GVSU has expanded my expertise in data analytics, AI, and machine learning.</p>
+        </div>
     </section>
 
     <section id="projects">
-        <h2>Projects <button class="heading-button" onclick="scrollToSection('projects')">See Projects</button></h2>
+        <h2>Projects <button class="heading-button" onclick="toggleContent('more-projects')">Read More</button></h2>
         <ul>
-            <li><b>Plane Crash Data Analysis:</b> Performed analysis to promote safety in the aviation industry using Python, Numpy, Pandas. (June 2024)</li>
-            <li><b>Triggering Notifications for Google Cloud Events:</b> Automated cloud functions for backup processes using GCP services like Pub/Sub and Cloud Functions. (April 2024)</li>
-            <li><b>Michigan Surface Water Quality Analysis:</b> Analyzed key factors affecting surface water quality, essential for 40% of Michigan's population. (April 2024)</li>
-            <li><b>Tic-Tac-Toe 2.0:</b> Developed a dynamic version of the game, allowing move changes using Python. (August 2023)</li>
-            <li><b>Cardiovascular Risk Assessment Using Pulse Pressure:</b> Built predictive models for CHD risk assessment with Python, Numpy, Pandas. (August 2023)</li>
+            <li><b>Plane Crash Data Analysis:</b> Performed analysis to promote safety in the aviation industry using Python, Numpy, and Pandas.</li>
+            <li><b>Triggering Notifications for Google Cloud Events:</b> Automated cloud functions for backup processes using GCP services like Pub/Sub and Cloud Functions.</li>
         </ul>
-    </section>
-
-    <section id="term-project">
-        <h2>Term Project <button class="heading-button" onclick="scrollToSection('term-project')">Learn More</button></h2>
-        <p>Currently working on a comprehensive vehicle inventory system that tracks and manages data for 4-wheeler vehicles produced between 2000 and 2024. The system provides detailed records, search functionalities, and analytical tools, allowing users to compare vehicle models across brands from both India and the USA, helping potential buyers make informed decisions.</p>
-    </section>
-
-    <section id="team-repositories">
-        <h2>Team Project Repositories <button class="heading-button" onclick="scrollToSection('team-repositories')">Visit GitHub</button></h2>
-        <p><a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles" target="_blank">GitHub Repository: GVSU CIS641 NinjaTurtles</a></p>
+        <div id="more-projects" class="more-content">
+            <ul>
+                <li><b>Michigan Surface Water Quality Analysis:</b> Analyzed factors affecting surface water quality, crucial for 40% of Michigan's population.</li>
+                <li><b>Tic-Tac-Toe 2.0:</b> Developed a dynamic version of the game, allowing move changes using Python.</li>
+                <li><b>Cardiovascular Risk Assessment Using Pulse Pressure:</b> Built predictive models for CHD risk assessment using Python, Numpy, and Pandas.</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
@@ -113,10 +119,14 @@
     </footer>
 
     <script>
-        // Function to scroll to a specific section
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            element.scrollIntoView({ behavior: 'smooth' });
+        // Function to toggle visibility of additional content
+        function toggleContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
         }
     </script>
 </body>
