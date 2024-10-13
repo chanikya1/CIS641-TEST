@@ -1,155 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chanikya Boggarapu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('background-image.jpg'); /* Add your background image here */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(46, 59, 78, 0.8);
-            color: white;
-        }
-        section {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 20px auto;
-            border-radius: 8px;
-            max-width: 1000px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: rgba(46, 59, 78, 0.8);
-            color: white;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        h2, p {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-        a {
-            color: #0044cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .heading-button {
-            float: right;
-            background-color: #2e3b4e;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .heading-button:hover {
-            background-color: #1f2b3a;
-        }
-        .more-content {
-            display: none;
-        }
-    </style>
+    <title>CarChoice: Discover Your Ideal Four-Wheeler</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Chanikya Boggarapu</h1>
+        <h1>CarChoice: Discover Your Ideal Four-Wheeler</h1>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h2>About Me <button class="heading-button" onclick="toggleContent('more-about-me')">Read More</button></h2>
-        <p>Dynamic and results-oriented GCP Cloud and DevOps Engineer with 3 Years of experience in designing, implementing, and maintaining AWS, GCP cloud solutions for various clients and automated CI/CD Pipelines. Proficient in managing GCP services such as Compute Engine, storage, cloud SQL, IAM, VPC, and Load balancing. Demonstrated ability to optimize cloud infrastructure for performance, security, and cost-efficiency.</p>
-        <div id="more-about-me" class="more-content">
-            <p>I have a proven track record in managing and optimizing cloud resources, troubleshooting complex cloud issues, and automating workflows to enhance efficiency and reduce operational costs. With hands-on experience in Python, SQL, Linux, and automation tools, I am continually looking to solve new challenges in the cloud space.</p>
-        </div>
-    </section>
+    <section>
+        <h2>Project Overview</h2>
+        <p>As international students from India living in the USA, we encountered difficulties navigating the vehicle market in a new country. This challenge inspired the creation of our Vehicle Inventory System, a platform that enables users to compare and explore 4-wheeler vehicles from both the USA and India. Designed specifically for individuals unfamiliar with foreign car brands and models, the platform provides an accessible way to compare vehicle options across both markets.</p>
 
-    <!-- Interests Section -->
-    <section id="interests">
-        <h2>Interests <button class="heading-button" onclick="toggleContent('more-interests')">Explore</button></h2>
-        <p>I like learning new things on the Internet, cooking in my free time, and I'm passionate about cricket, following the game 24/7/365. I enjoy spending time with my favorite people.</p>
-        <div id="more-interests" class="more-content">
-            <p>Along with my interests in cloud engineering and cricket, I spend time exploring various technologies, watching sports analytics, and finding ways to optimize my learning through online courses and documentation. My curiosity extends to AI, machine learning, and automation tools that are transforming the tech industry today.</p>
-        </div>
-    </section>
-
-    <!-- Technical Background Section -->
-    <section id="technical-background">
-        <h2>Technical Background <button class="heading-button" onclick="toggleContent('more-tech-background')">View Details</button></h2>
-        <p>I completed my undergraduate degree in Computer Science in 2020 and worked as an Associate Cloud Engineer for a pharmaceutical company for three years. In August 2023, I began pursuing my master's in Computer Science at Michigan GVSU. I'm currently in my third semester, with experience in Python, SQL, Linux, Apache, Static, Middleware tools, and Cloud Computing.</p>
-        <div id="more-tech-background" class="more-content">
-            <p>In my role, I handled the deployment and optimization of cloud infrastructures, developed automated CI/CD pipelines, and ensured data security and cost efficiency in cloud projects. My exposure to middleware tools and containerization platforms like Docker has helped me tackle complex projects with ease. As part of my master's, I am deepening my knowledge in advanced cloud technologies, AI, and big data.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects <button class="heading-button" onclick="toggleContent('more-projects')">See Projects</button></h2>
+        <h3>Key Features</h3>
         <ul>
-            <li><b>Plane Crash Data Analysis:</b> Performed analysis to promote safety in the aviation industry using Python, Numpy, Pandas. (June 2024)</li>
-            <li><b>Triggering Notifications for Google Cloud Events:</b> Automated cloud functions for backup processes using GCP services like Pub/Sub and Cloud Functions. (April 2024)</li>
-            <li><b>Michigan Surface Water Quality Analysis:</b> Analyzed key factors affecting surface water quality, essential for 40% of Michigan's population. (April 2024)</li>
+            <li>Comprehensive Data Tracking: The system manages data for 4-wheeler vehicles produced between 2010 and 2024, focusing on brands from India and the USA.</li>
+            <li>Side-by-Side Comparisons: Users can compare vehicle models from both countries, exploring specifications and details for each brand and year.</li>
         </ul>
-        <div id="more-projects" class="more-content">
-            <ul>
-                <li><b>Tic-Tac-Toe 2.0:</b> Developed a dynamic version of the game, allowing move changes using Python. (August 2023)</li>
-                <li><b>Cardiovascular Risk Assessment Using Pulse Pressure:</b> Built predictive models for CHD risk assessment with Python, Numpy, Pandas. (August 2023)</li>
-            </ul>
-        </div>
+
+        <h3>Project Artifacts</h3>
+        <ul>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/artifacts/User%20Selection%20Process%20Activity%20Diagram.jpg">User Selection Process Activity Diagram</a>
+            </li>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/artifacts/Home%20Page%20Use%20Case%20Diagram.jpg">Home Page Use Case Diagram</a>
+            </li>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/artifacts/Vehicle%20Comparison%20Process%20Activity%20Diagram.jpg">Vehicle Comparison Process Activity Diagram</a>
+            </li>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/artifacts/Vehicle%20Comparison%20Use%20Case%20Diagram.jpg">Vehicle Comparison Use Case Diagram</a>
+            </li>
+        </ul>
+
+        <h3>Project Documents</h3>
+        <ul>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/docs/README.md">Read Me</a>
+            </li>
+            <li>
+                <a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/docs/proposal-template.md">Proposal Template File</a>
+            </li>
+        </ul>
     </section>
-
-    <!-- Term Project Section -->
-    <section id="term-project">
-        <h2>Term Project <button class="heading-button" onclick="toggleContent('more-term-project')">Learn More</button></h2>
-        <p>Currently working on a comprehensive vehicle inventory system that tracks and manages data for 4-wheeler vehicles produced between 2000 and 2024. The system provides detailed records, search functionalities, and analytical tools, allowing users to compare vehicle models across brands from both India and the USA, helping potential buyers make informed decisions.</p>
-        <div id="more-term-project" class="more-content">
-            <p>This project includes a robust back-end system, providing users with an intuitive way to explore vehicles' performance, pricing, and technical specifications. Leveraging data analysis tools, the system will also offer recommendations based on user preferences and past trends in the automobile industry.</p>
-        </div>
-    </section>
-
-    <!-- Team Repositories Section -->
-    <section id="team-repositories">
-        <h2>Team Project Repositories <button class="heading-button" onclick="toggleContent('more-team-repositories')">Visit GitHub</button></h2>
-        <p><a href="https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles" target="_blank">GitHub Repository: GVSU CIS641 NinjaTurtles</a></p>
-        <div id="more-team-repositories" class="more-content">
-            <p>This repository contains the collaborative work my team and I are contributing toward our semester-long project for CIS641. The project revolves around building efficient cloud-based systems for real-world scenarios.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 Chanikya Boggarapu. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Function to toggle visibility of additional content
-        function toggleContent(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section.style.display === "none" || section.style.display === "") {
-                section.style.display = "block";
-            } else {
-                section.style.display = "none";
-            }
-        }
-    </script>
 </body>
+
 </html>
