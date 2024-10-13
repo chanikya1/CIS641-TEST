@@ -1,86 +1,67 @@
-/* Google Font */
+/* Style for the entire body */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298), 
-                url('https://w0.peakpx.com/wallpaper/299/62/HD-wallpaper-snow-field-trees-fog-covered-mountains-under-light-red-sky-in-sunrays-background-scenery-nature.jpg'); /* Background image with subtle texture */
-    background-size: cover; /* Ensures the image covers the full background */
-    background-attachment: fixed; /* Keeps the background in place when scrolling */
+    font-family: Arial, sans-serif;
+    background-image: url('https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/image.jpg'); /* Background image from the repository */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
 }
 
-/* Header Styling */
+/* Style for the header */
 header {
-    background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
 }
 
 header h1 {
-    font-size: 3em;
-    color: #ffffff;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #d1e0f5;
-}
-
-/* Main Section */
-main {
-    padding: 40px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.intro h2 {
     font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #ffffff;
+    margin: 0;
+    color: #f8f8f8;
 }
 
-.intro p {
-    font-size: 1.2em;
-    color: #e5efff;
+/* Style for the main content */
+section {
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.features {
-    margin-top: 30px;
+h2, h3 {
+    color: #f8f8f8;
 }
 
-.features ul {
-    list-style: none;
+/* List styling */
+ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.features ul li {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #f0f8ff;
+ul li {
+    margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    color: #d1e0f5;
-    font-size: 0.9em;
-}
-
-/* Links and buttons (optional) */
-a {
-    color: #d1e0f5;
+ul li a {
     text-decoration: none;
+    color: #f8f8f8;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #ffffff;
+ul li a:hover {
+    color: #4caf50;
+}
+
+/* Ensure links are distinct */
+a {
+    color: #ffeb3b;
+}
+
+/* Add some padding to ensure text doesn’t touch the edge of the section */
+section p, ul {
+    padding-left: 15px;
+    padding-right: 15px;
 }
