@@ -19,13 +19,32 @@
             color: #ffffff;
         }
 
-        h3 a {
+        h2, h3 {
+            font-size: 24px; /* Set a uniform size for all headings */
+            color: #ffffff; /* Set color for headings */
+        }
+
+        h2 a, h3 a {
             color: #ffffff; /* Sets the hyperlink color */
             text-decoration: none; /* Removes underline */
         }
 
-        h3 a:hover {
+        h2 a:hover, h3 a:hover {
             text-decoration: underline; /* Underline on hover for better visibility */
+        }
+
+        ul {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+
+        ul li {
+            margin: 5px 0; /* Space between list items */
+        }
+
+        /* Ensures the body font is consistent */
+        p {
+            font-size: 16px; /* Set a uniform size for the paragraph text */
         }
     </style>
 </head>
@@ -37,7 +56,7 @@
 
     <section>
         <h2>
-            <a href="#project-overview" style="color: #ffffff; text-decoration: none;">Project Overview</a>
+            <a href="#project-overview">Project Overview</a>
         </h2>
         <p id="project-overview">As international students from India living in the USA, we encountered difficulties navigating the vehicle market in a new country. This challenge inspired the creation of our Vehicle Inventory System, a platform that enables users to compare and explore 4-wheeler vehicles from both the USA and India. Designed specifically for individuals unfamiliar with foreign car brands and models, the platform provides an accessible way to compare vehicle options across both markets.</p>
 
@@ -48,7 +67,7 @@
         </ul>
 
         <h2>
-            <a href="#project-artifacts" style="color: #ffffff; text-decoration: none;">Project Artifacts</a>
+            <a href="#project-artifacts">Project Artifacts</a>
         </h2>
         <ul id="project-artifacts">
             <li>
@@ -66,7 +85,7 @@
         </ul>
 
         <h2>
-            <a href="#project-documents" style="color: #ffffff; text-decoration: none;">Project Documents</a>
+            <a href="#project-documents">Project Documents</a>
         </h2>
         <ul id="project-documents">
             <li>
