@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://github.com/rohitajala/GVSU-CIS641-NinjaTurtles/blob/main/image.jpg'); /* Background image from the repository */
+    background-image: url('image.jpg'); /* Background image from the repository */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center;
     background-attachment: fixed;
