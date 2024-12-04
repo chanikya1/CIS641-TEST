@@ -78,56 +78,6 @@ const featuredCars = {
     ]
 };
 
-// Update models dynamically based on selected make
-function updateModels() {
-    const makeSelect = document.getElementById("make");
-    const modelSelect = document.getElementById("model");
-    const selectedMake = makeSelect.value;
-
-    // Clear existing options
-    modelSelect.innerHTML = '<option value="default">Model</option>';
-
-    // Clear featured cars
-    const featuredSection = document.getElementById("featured-cars-list");
-    featuredSection.innerHTML = '';
-
-    // Populate models for the selected make
-    if (carModels[selectedMake]) {
-        carModels[selectedMake].forEach((car) => {
-            const option = document.createElement("option");
-            option.value = car.model.toLowerCase().replace(/\s+/g, "-");
-            option.textContent = car.model;
-            modelSelect.appendChild(option);
-        });
-
-        // Populate featured cars for the selected make
-        const featuredCarsList = featuredCars[selectedMake];
-        featuredCarsList.forEach(car => {
-            const carHTML = `
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-featured-cars">
-                        <div class="featured-img-box">
-                            <div class="featured-cars-img">
-                                <img src="assets/images/cars-collection/${car.image}" alt="car">
-                            </div>
-                            <div class="featured-model-info">
-                                <p>model: ${car.year} <span class="featured-mi-span">${car.mileage}</span> <span class="featured-hp-span">240HP</span> automatic</p>
-                            </div>
-                        </div>
-                        <div class="featured-cars-txt">
-                            <h2><a href="#">${car.model}</a></h2>
-                            <h3>${car.price}</h3>
-                        </div>
-                    </div>
-                </div>
-            `;
-            featuredSection.innerHTML += carHTML;
-        });
-    } else {
-        // Show all cars if no brand is selected
-        showAllCars();
-    }
-}
 
 // Function to show all cars in featured section
 function showAllCars() {
@@ -158,6 +108,89 @@ function showAllCars() {
         featuredSection.innerHTML += carHTML;
     });
 }
+
+
+// Function to populate featured cars based on selected make
+function populateFeaturedCarsByMake(selectedMake) {
+    const featuredSection = document.getElementById("featured-cars-list");
+    featuredSection.innerHTML = ""; // Clear current featured cars
+
+    if (featuredCars[selectedMake]) {
+        featuredCars[selectedMake].forEach(car => {
+            const carHTML = `
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-featured-cars">
+                        <div class="featured-img-box">
+                            <div class="featured-cars-img">
+                                <img src="assets/images/cars-collection/${car.image}" alt="car">
+                            </div>
+                            <div class="featured-model-info">
+                                <p>model: ${car.year} <span class="featured-mi-span">${car.mileage}</span> <span class="featured-hp-span">240HP</span> automatic</p>
+                            </div>
+                        </div>
+                        <div class="featured-cars-txt">
+                            <h2><a href="#">${car.model}</a></h2>
+                            <h3>${car.price}</h3>
+                        </div>
+                    </div>
+                </div>
+            `;
+            featuredSection.innerHTML += carHTML;
+        });
+    }
+}
+
+// Function to populate featured cars based on country
+function populateFeaturedCarsByCountry(selectedCountry) {
+    const featuredSection = document.getElementById("featured-cars-list");
+    featuredSection.innerHTML = ""; // Clear current featured cars
+
+    const makesForCountry = {
+        india: ["tata", "mahindra", "maruti"],
+        usa: ["ford", "chevrolet"]
+    };
+
+    if (makesForCountry[selectedCountry]) {
+        makesForCountry[selectedCountry].forEach(make => {
+            if (featuredCars[make]) {
+                featuredCars[make].forEach(car => {
+                    const carHTML = `
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-featured-cars">
+                                <div class="featured-img-box">
+                                    <div class="featured-cars-img">
+                                        <img src="assets/images/cars-collection/${car.image}" alt="car">
+                                    </div>
+                                    <div class="featured-model-info">
+                                        <p>model: ${car.year} <span class="featured-mi-span">${car.mileage}</span> <span class="featured-hp-span">240HP</span> automatic</p>
+                                    </div>
+                                </div>
+                                <div class="featured-cars-txt">
+                                    <h2><a href="#">${car.model}</a></h2>
+                                    <h3>${car.price}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    featuredSection.innerHTML += carHTML;
+                });
+            }
+        });
+    }
+}
+
+
+document.getElementById("make").addEventListener("change", () => {
+    const make = document.getElementById("make").value;
+    populateFeaturedCarsByMake(make);
+});
+
+
+
+document.getElementById("country").addEventListener("change", () => {
+    const country = document.getElementById("country").value;
+    populateFeaturedCarsByCountry(country);
+});
 
 // Initialize with all cars shown
 document.addEventListener("DOMContentLoaded", () => {

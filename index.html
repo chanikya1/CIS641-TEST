@@ -121,11 +121,10 @@
 									<div class="single-model-search">
 										<h2>Select Country</h2>
 										<div class="model-select-icon">
-											<select class="form-control" id="country">
+											<select class="form-control" id="country" onchange="updateMakes()">
 												<option value="default">Country</option>
 												<option value="india">India</option>
 												<option value="usa">USA</option>
-												<option value="uk">UK</option>
 											</select>
 										</div>
 									</div>
@@ -146,7 +145,7 @@
 										<h2>Select Brand</h2>
 										<div class="model-select-icon">
 											<select class="form-control" id="make" onchange="updateModels()">
-												<option value="default">Make</option>
+												<option value="default">Brand</option>
 												<option value="tata">Tata</option>
 												<option value="mahindra">Mahindra</option>
 												<option value="maruti">Maruti Suzuki</option>
@@ -173,9 +172,32 @@
 									<div class="single-model-search">
 										<h2>Select Model</h2>
 										<div class="model-select-icon">
-											<select class="form-control" id="model">
+											<select class="form-control" id="model" onModelSelect()>
 												<option value="default">Model</option>
-												<!-- Models will be updated dynamically -->
+												<option value="Tata Nexon">Tata Nexon</option>
+												<option value="Tata Harrier">Tata Harrier</option>
+												<option value="Tata Altroz">Tata Altroz</option>
+												<option value="Mahindra XUV700">Mahindra XUV700</option>
+												<option value="Mahindra Thar">Mahindra Thar</option>
+												<option value="Mahindra Scorpio">Mahindra Scorpio</option>
+												<option value="Mahindra Bolero">Mahindra Bolero</option>
+												<option value="Maruti Vitara Brezza">Maruti Vitara Brezza</option>
+												<option value="Maruti Swift">Maruti Swift</option>
+												<option value="Maruti Ertiga">Maruti Ertiga</option>
+												<option value="Maruti Dzire">Maruti Dzire</option>
+												<option value="Ford Mustang">Ford Mustang</option>
+												<option value="Ford F-150">Ford F-150</option>
+												<option value="Ford Explorer">Ford Explorer</option>
+												<option value="Ford Escape">Ford Escape</option>
+												<option value="Chevrolet Traverse">Chevrolet Traverse</option>
+												<option value="Chevrolet Silverado">Chevrolet Silverado</option>
+												<option value="Chevrolet Malibu">Chevrolet Malibu</option>
+												<option value="Chevrolet Equinox">Chevrolet Equinox</option>
+												<option value="Tesla Model Y">Tesla Model Y</option>
+												<option value="Tesla Model X">Tesla Model X</option>
+												<option value="Tesla Model S">Tesla Model S</option>
+												<option value="Tesla Model 3">Tesla Model 3</option>
+																							
 											</select>
 										</div>
 									</div>
@@ -444,18 +466,19 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm1.png" alt="img"/>
+											<img src="assets/images/new-cars-model/ncm1.jpg" alt="img"/>
 										</div><!--/.new-cars-img-->
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="new-cars-txt">
-											<h2><a href="#">chevrolet camaro <span> za100</span></a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
+											<h2><a href="#">Kia Stinger GT</a></h2>
+												<p>
+													The Kia Stinger GT is a high-performance sedan that combines sporty aesthetics with a refined driving experience. With its sleek design and powerful engine, it’s perfect for those who want both luxury and excitement.
+												</p>
+												<p class="new-cars-para2">
+													Powered by a turbocharged engine, the Stinger GT offers a thrilling performance, while also boasting an upscale interior and cutting-edge tech features that make every drive a pleasure.
+												</p>
+
 											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
 												view details
 											</button>
@@ -469,18 +492,19 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm2.png" alt="img"/>
+											<img src="assets/images/new-cars-model/ncm2.jpg" alt="img"/>
 										</div><!--/.new-cars-img-->
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="new-cars-txt">
-											<h2><a href="#">BMW series-3 wagon</a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
+											<h2><a href="#">Hyundai Veloster N</a></h2>
+												<p>
+													The Hyundai Veloster N combines performance and style, designed for those who enjoy a thrilling driving experience. With its dynamic handling and bold looks, it offers a sporty alternative to everyday hatchbacks.
+												</p>
+												<p class="new-cars-para2">
+													Equipped with a turbocharged engine, the Veloster N delivers incredible acceleration and agility, making every drive an adventure. It’s a car built for performance enthusiasts who want both speed and fun.
+												</p>
+
 											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
 												view details
 											</button>
@@ -494,18 +518,19 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm3.png" alt="img"/>
+											<img src="assets/images/new-cars-model/ncm3.jpg" alt="img"/>
 										</div><!--/.new-cars-img-->
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="new-cars-txt">
-											<h2><a href="#">ferrari 488 superfast</a></h2>
+											<h2><a href="#">MG HS PHEV</a></h2>
 											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+												The MG HS PHEV combines a sleek design with hybrid power, offering both efficiency and performance. With a spacious interior and advanced safety features, it's an ideal choice for those seeking a stylish yet practical SUV.
 											</p>
 											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
+												Experience the power of a 1.5L turbocharged engine combined with an electric motor, providing a smooth and eco-friendly drive. The MG HS PHEV is the perfect blend of cutting-edge technology and modern design.
 											</p>
+
 											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
 												view details
 											</button>
@@ -548,6 +573,11 @@
 								<img src="assets/images/brand/br4.png" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
+						<div class="item">
+							<a href="brand.html">
+								<img src="assets/images/brand/br5.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
 
 						
 
@@ -579,11 +609,11 @@
 									<a href="index.html">carvilla</a>
 								</div>
 								<p>
-									Come to carvilla for best information on cars and make the best purchase! :)
+									Discover diverse car models, offering performance, style, and reliability.
 								</p>
 								<div class="footer-contact">
-									<p>info@carvilla.com</p>
-									<p>+1 6162425760</p>
+									<p>info@themesine.com</p>
+									<p>+1 (885) 2563154554</p>
 								</div>
 							</div>
 						</div>
@@ -604,16 +634,22 @@
 								<div class="row">
 									<div class="col-md-7 col-xs-6">
 										<ul>
-											<li><a href="brand.html">Tata</a></li>
-											<li><a href="brand.html">Mahindra</a></li>
-											<li><a href="brand.html">Maruti Suzuki</a></li>
-											<li><a href="brand.html">Ford</a></li>
+											<li><a href="brand.html">tata</a></li>
+											<li><a href="brand.html">mahindra</a></li>
+											<li><a href="brand.html">maruti</a></li>
+											<li><a href="brand.html">ford</a></li>
+											<li><a href="brand.html">chevrolet</a></li>
+											<li><a href="brand.html">tesla</a></li>
 										</ul>
 									</div>
 									<div class="col-md-5 col-xs-6">
 										<ul>
-											<li><a href="brand.html">Tesla</a></li>
-											<li><a href="brand.html">Chevrolet</a></li>
+											<li><a href="brand.html">tesla</a></li>
+											<li><a href="brand.html">mahindra</a></li>
+											<li><a href="brand.html">maruti</a></li>
+											<li><a href="brand.html">ford</a></li>
+											<li><a href="brand.html">chevrolet</a></li>
+											<li><a href="brand.html">tesla</a></li>
 										</ul>
 									</div>
 								</div>
@@ -639,7 +675,24 @@
 						</div>
 					</div>
 				</div>
-				
+				<div class="footer-copyright">
+					<div class="row">
+						<div class="col-sm-6">
+							<p>
+								&copy; copyright.designed and developed by CarVilla.
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-pinterest-p"></i></a>
+								<a href="#"><i class="fa fa-behance"></i></a>	
+							</div>
+						</div>
+					</div>
+				</div><!--/.footer-copyright-->
 			</div><!--/.container-->
 
 			<div id="scroll-Top">
@@ -657,7 +710,10 @@
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
 
-		<script src="assets/js/main.js"></script>
+		<script src="assets/js/update_form.js"></script>
+		<script src="assets/js/form_control.js"></script>
+		<script src="assets/js/car_model.js"></script>
+		<!--<script src="assets/js/main.js"></script>-->
 		<script src="assets/js/jquery.js"></script>
         
         <!--modernizr.min.js-->
