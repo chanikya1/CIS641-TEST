@@ -147,7 +147,7 @@ function populateFeaturedCarsByCountry(selectedCountry) {
 
     const makesForCountry = {
         india: ["tata", "mahindra", "maruti"],
-        usa: ["ford", "chevrolet"]
+        usa: ["ford", "chevrolet", 'tesla']
     };
 
     if (makesForCountry[selectedCountry]) {

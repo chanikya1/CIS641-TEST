@@ -119,3 +119,48 @@ document.getElementById("model").addEventListener("change", () => {
         populateFeaturedCarsByModel(selectedModel);
     }
 });
+
+
+
+// Function to populate the featured cars based on selected year
+function populateFeaturedCarsByYear() {
+    const selectedYear = document.getElementById("year").value;
+    const featuredSection = document.getElementById("featured-cars-list");
+    featuredSection.innerHTML = ""; // Clear current featured cars
+
+    // Only proceed if a model is selected
+    if ( selectedYear !== "default") {
+        for (const carKey in modelCars) {
+            const car = modelCars[carKey];
+
+            // Filter cars by selected model and year
+            if (car.year === selectedYear) {
+                const carHTML = `
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-featured-cars">
+                            <div class="featured-img-box">
+                                <div class="featured-cars-img">
+                                    <img src="assets/images/cars-collection/${car.image}" alt="car">
+                                </div>
+                                <div class="featured-model-info">
+                                    <p>Model: ${car.year} <span class="featured-mi-span">${car.mileage}</span> <span class="featured-hp-span">240HP</span> automatic</p>
+                                </div>
+                            </div>
+                            <div class="featured-cars-txt">
+                                <h2><a href="#">${carKey}</a></h2>
+                                <h3>${car.price}</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                featuredSection.innerHTML += carHTML;
+            }
+        }
+    }
+}
+
+// Attach event listener to the year dropdown
+document.getElementById("year").addEventListener("change", () => {
+    populateFeaturedCarsByYear(); // Call function when the year is selected
+});
+
