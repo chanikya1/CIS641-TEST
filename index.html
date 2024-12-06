@@ -174,10 +174,20 @@
 </div>
 
 <script>
-    // Brand data mapping
+    // Brand data mapping for each country
     const brandData = {
         india: ["Tata", "Mahindra", "Maruti Suzuki"],
         usa: ["Ford", "Chevrolet", "Tesla"]
+    };
+
+    // Model data mapping for each brand
+    const modelData = {
+        tata: ["Tata Nexon", "Tata Harrier", "Tata Altroz"],
+        mahindra: ["Mahindra XUV700", "Mahindra Thar", "Mahindra Scorpio", "Mahindra Bolero"],
+        maruti: ["Maruti Vitara Brezza", "Maruti Swift", "Maruti Ertiga", "Maruti Dzire"],
+        ford: ["Ford Mustang", "Ford F-150", "Ford Explorer", "Ford Escape"],
+        chevrolet: ["Chevrolet Traverse", "Chevrolet Silverado", "Chevrolet Malibu", "Chevrolet Equinox"],
+        tesla: ["Tesla Model Y", "Tesla Model X", "Tesla Model S", "Tesla Model 3"]
     };
 
     // Update the "Brand" dropdown based on selected country
@@ -185,16 +195,39 @@
         const country = document.getElementById("country").value;
         const makeSelect = document.getElementById("make");
 
-        // Clear existing options
+        // Clear existing options in "Brand"
         makeSelect.innerHTML = '<option value="default">Brand</option>';
 
+        // Reset model dropdown
+        const modelSelect = document.getElementById("model");
+        modelSelect.innerHTML = '<option value="default">Model</option>';
+
         if (country in brandData) {
-            // Populate with relevant brands
+            // Populate brand options based on country selection
             brandData[country].forEach(brand => {
                 const option = document.createElement("option");
-                option.value = brand.toLowerCase();
+                option.value = brand.toLowerCase().replace(/\s+/g, '');  // Convert to lowercase and remove spaces
                 option.textContent = brand;
                 makeSelect.appendChild(option);
+            });
+        }
+    }
+
+    // Update models based on selected brand
+    function updateModels() {
+        const brand = document.getElementById("make").value;
+        const modelSelect = document.getElementById("model");
+
+        // Clear existing options in "Model"
+        modelSelect.innerHTML = '<option value="default">Model</option>';
+
+        if (brand in modelData) {
+            // Populate models based on selected brand
+            modelData[brand].forEach(model => {
+                const option = document.createElement("option");
+                option.value = model;
+                option.textContent = model;
+                modelSelect.appendChild(option);
             });
         }
     }
