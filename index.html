@@ -102,144 +102,168 @@
 			</div><!-- /.top-area-->
 			<!-- top-area End -->
 
-<div class="container">
-    <div class="welcome-hero-txt">
-        <h2>Get your desired car at a reasonable price</h2>
-        <p>
-            With Carvilla, you are guaranteed to get the best. Get the best listings for any car model.
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvilla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <h2>Get your desired car at a reasonable price</h2>
+            <p>
+                With Carvilla, you are guaranteed to get the best. Get the best listings for any car model.
+            </p>
+        </div>
     </div>
-</div>
 
-<div class="container" style="background-color: white;">
-    <div class="welcome-hero-txt">
-        <h2>Get your desired car at a reasonable price</h2>
-        <p>
-            With Carvilla, you are guaranteed to get the best. Get the best listings for any car model.
-        </p>
+    <!-- Main Section with White Background -->
+    <div class="container" style="background-color: white;">
+        <div class="welcome-hero-txt">
+            <h2>Get your desired car at a reasonable price</h2>
+            <p>
+                With Carvilla, you are guaranteed to get the best. Get the best listings for any car model.
+            </p>
+        </div>
     </div>
-</div>
 
-<div class="container" style="background-color: white;">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="model-search-content">
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Select Country</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control" id="country" onchange="updateMakes()">
-                                    <option value="default">Country</option>
-                                    <option value="india">India</option>
-                                    <option value="usa">USA</option>
-                                </select>
+    <!-- Search Section -->
+    <div class="container" style="background-color: white;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="model-search-content">
+                    <div class="row">
+                        <!-- Country Dropdown -->
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>Select Country</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control" id="country" onchange="updateMakes()">
+                                        <option value="default">Country</option>
+                                        <option value="india">India</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Select Brand</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control" id="make" onchange="updateModels()">
-                                    <option value="default">Brand</option>
-                                </select>
+
+                        <!-- Brand and Year Dropdowns -->
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>Select Brand</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control" id="make" onchange="updateModels()">
+                                        <option value="default">Brand</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="single-model-search">
+                                <h2>Select Year</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control" id="year">
+                                        <option value="default">Year</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="single-model-search">
-                            <h2>Select Year</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control" id="year">
-                                    <option value="default">Year</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2019">2019</option>
-                                </select>
+
+                        <!-- Model Dropdown -->
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>Select Model</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control" id="model">
+                                        <option value="default">Model</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Select Model</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control" id="model">
-                                    <option value="default">Model</option>
-                                </select>
+
+                        <!-- Search Button -->
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-model-search text-center">
+                                <button class="welcome-btn model-search-btn" onclick="searchCars()">
+                                    Search
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <div class="single-model-search text-center">
-                            <button class="welcome-btn model-search-btn" onclick="searchCars()">
-                                Search
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    // Brand data mapping for each country
-    const brandData = {
-        india: ["Tata", "Mahindra", "Maruti Suzuki"],
-        usa: ["Ford", "Chevrolet", "Tesla"]
-    };
+    <!-- JavaScript Logic -->
+    <script>
+        // Brand data mapping for each country
+        const brandData = {
+            india: ["Tata", "Mahindra", "Maruti Suzuki"],
+            usa: ["Ford", "Chevrolet", "Tesla"]
+        };
 
-    // Model data mapping for each brand
-    const modelData = {
-        tata: ["Tata Nexon", "Tata Harrier", "Tata Altroz"],
-        mahindra: ["Mahindra XUV700", "Mahindra Thar", "Mahindra Scorpio", "Mahindra Bolero"],
-        maruti: ["Maruti Vitara Brezza", "Maruti Swift", "Maruti Ertiga", "Maruti Dzire"],
-        ford: ["Ford Mustang", "Ford F-150", "Ford Explorer", "Ford Escape"],
-        chevrolet: ["Chevrolet Traverse", "Chevrolet Silverado", "Chevrolet Malibu", "Chevrolet Equinox"],
-        tesla: ["Tesla Model Y", "Tesla Model X", "Tesla Model S", "Tesla Model 3"]
-    };
+        // Model data mapping for each brand
+        const modelData = {
+            tata: ["Tata Nexon", "Tata Harrier", "Tata Altroz"],
+            mahindra: ["Mahindra XUV700", "Mahindra Thar", "Mahindra Scorpio", "Mahindra Bolero"],
+            maruti: ["Maruti Vitara Brezza", "Maruti Swift", "Maruti Ertiga", "Maruti Dzire"],
+            ford: ["Ford Mustang", "Ford F-150", "Ford Explorer", "Ford Escape"],
+            chevrolet: ["Chevrolet Traverse", "Chevrolet Silverado", "Chevrolet Malibu", "Chevrolet Equinox"],
+            tesla: ["Tesla Model Y", "Tesla Model X", "Tesla Model S", "Tesla Model 3"]
+        };
 
-    // Update the "Brand" dropdown based on selected country
-    function updateMakes() {
-        const country = document.getElementById("country").value;
-        const makeSelect = document.getElementById("make");
+        // Update the "Brand" dropdown based on selected country
+        function updateMakes() {
+            const country = document.getElementById("country").value;
+            const makeSelect = document.getElementById("make");
 
-        // Clear existing options in "Brand"
-        makeSelect.innerHTML = '<option value="default">Brand</option>';
+            // Clear existing options in "Brand"
+            makeSelect.innerHTML = '<option value="default">Brand</option>';
 
-        // Reset model dropdown
-        const modelSelect = document.getElementById("model");
-        modelSelect.innerHTML = '<option value="default">Model</option>';
+            // Reset model dropdown
+            const modelSelect = document.getElementById("model");
+            modelSelect.innerHTML = '<option value="default">Model</option>';
 
-        if (country in brandData) {
-            // Populate brand options based on country selection
-            brandData[country].forEach(brand => {
-                const option = document.createElement("option");
-                option.value = brand.toLowerCase().replace(/\s+/g, '');  // Convert to lowercase and remove spaces
-                option.textContent = brand;
-                makeSelect.appendChild(option);
-            });
+            if (country in brandData) {
+                // Populate brand options based on country selection
+                brandData[country].forEach(brand => {
+                    const option = document.createElement("option");
+                    option.value = brand.toLowerCase().replace(/\s+/g, '');  // Convert to lowercase and remove spaces
+                    option.textContent = brand;
+                    makeSelect.appendChild(option);
+                });
+            }
         }
-    }
 
-    // Update models based on selected brand
-    function updateModels() {
-        const brand = document.getElementById("make").value;
-        const modelSelect = document.getElementById("model");
+        // Update models based on selected brand
+        function updateModels() {
+            const brand = document.getElementById("make").value;
+            const modelSelect = document.getElementById("model");
 
-        // Clear existing options in "Model"
-        modelSelect.innerHTML = '<option value="default">Model</option>';
+            // Clear existing options in "Model"
+            modelSelect.innerHTML = '<option value="default">Model</option>';
 
-        if (brand in modelData) {
-            // Populate models based on selected brand
-            modelData[brand].forEach(model => {
-                const option = document.createElement("option");
-                option.value = model;
-                option.textContent = model;
-                modelSelect.appendChild(option);
-            });
+            if (brand in modelData) {
+                // Populate models based on selected brand
+                modelData[brand].forEach(model => {
+                    const option = document.createElement("option");
+                    option.value = model;
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
+                });
+            }
         }
-    }
+    </script>
+</body>
+</html>
+
 </script>
 		<section id="featured-cars" class="featured-cars">
 			<div class="container">
